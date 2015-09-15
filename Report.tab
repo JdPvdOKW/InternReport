@@ -1,0 +1,27 @@
+\@doantabnote {1}
+macro:->m=moister
+content,
+nt=
+N-total,
+om=OM
+content,
+ct=
+C-total,
+CN=C/N
+ratio,
+ph=pH,
+ca=\ce
+{CaCO3},
+ce=CEC,
+no=\ce
+{NO3},
+nh=\ce
+{NH4},
+si=silt,
+sa=sand,
+bf=BFI,
+hw=HWC,
+re=
+respiration
+
+\@endantabnote 
