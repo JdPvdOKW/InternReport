@@ -1,6 +1,6 @@
 \documentclass[10pt,twoside,dutch,english]{report}
 
-    \usepackage[helvetica]{quotchap}   % fancy chapter beginning, times other option
+    \usepackage[helvetica]{quotchap}   % fancy chapter beginning, times is other option
     \usepackage{fancyhdr}
 	\usepackage[justification=raggedright, font=small, labelfont=bf,singlelinecheck=false]{caption}     %better control over captions (sideways, font, ...)  
     \usepackage{subfigure}  % with scriptsize or so, one can adapt the size
@@ -9,6 +9,7 @@
     \usepackage{enumerate}  % to make it possible to define the numbers (A,a, ...)
    % \usepackage{psfrag}
     \usepackage{graphicx}
+    \usepackage{float} %fix floats on place you want (H)
     \usepackage{subfigure}
     %tables
     \usepackage{tabu} %table package. Veel mogelijkheden, bomen en bos
@@ -16,6 +17,7 @@
     \usepackage{mbenotes}
     \usepackage{tabularx}
 
+ \usepackage{gensymb} %bijvoorbeeld graden symbool
  
     \usepackage{threeparttable} %tables with notes
        \usepackage[referable]{threeparttablex}
@@ -79,16 +81,17 @@
 
 \chapter{Introduction}
 %Voor 80% af op 10/7/15
-The goal of this project is to get more insight in soil processes that influence the relation between soil quality and forage production. Focus of this study is on the general research pattern. 
+The goal of this project is to get more insight in soil processes that influence the relation between soil characteristics, nitrogen mineralization and forage production. The focus of this study is not really on the outcomes, but more on the general pattern of analyzing. We will show the potential of this concept to be used and give some recommendations for improvement of this method. 
 
-	\section{Relevance}
+\section{Relevance: upgrade fertilization recommendations}
 	We want to grow more forage with less fertilization. Nitrogen (N) is often growth limiting, partly because of the more and more strict regulations on fertilizer and manure application. Mineralization of soil organic matter (SOM) is a key soil process, a.o. because it provides the plants with mineral N. To maintain yields and prevent losses (leaching, volatilization) a balanced nutrient management is required. It is increasingly important to give farmers clear soil management guidelines. Much is known on the nutrient behavior in soils. However, relations between soil indicators and forage production are still vague.  This linkage has to be investigated to upgrade soil N fertilization recommendations and to better understand the SOM behavior. 
 	
-		\section{Background} %De aanleiding voor het onderzoek
+\section{Background: soil nutrient management}
+%De aanleiding voor het onderzoek
 	
 			
 		\subsection{Nutrient flows in grass production}
-		The efficiency of forage production in terms of nutrient in- and outputs becomes more and more important in modern dairy farming. Forage production depends among others on soil quality, fertilization and other pasture management actions. It is known that fertilization practices affects the quality and composition of herbage directly, but there are not much studies that links soil fertility with herbage quality under practical conditions \citep{Reijneveld2014}. In terms of farm nutrient management, the aim is to  distribute the available amount of fertilizer and manure optimally. Therefore, the nutrient usage as well as the SOM mineralization has to be considered over time. It will also pay of in nutrient use efficiency to consider spatial soil differences of farms in order to optimize nutrient  distribution over all fields within a farm.  A first step is the development of the instrument Annual Nutrient Cycling Assessment (ANCA, dutch: 	\href{http://www.wageningenur.nl/nl/show/KringloopWijzer-2.htm}{\textit{Kringloopwijzer}}). The ANCA instrument is developed to presents a clear overview of individual farm nutrient cycles \citep{Aarts2013}. The ANCA model is a monitoring instrument that takes into account all possible nutrients flows. All fluxes can be described by existing data of the whole farm (Fig. \ref{fig:KLW}). This tool has high potential for governmental regulations, farm management advice and it provides knowledge and data for fundamental and applied research. However, a disadvantage of the ANCA system is that the soil part is not yet implemented. It is not fully understood in what extend soil processes have influence on for example leaching or crop uptake under certain circumstances.  For optimal dairy farm soil management, the ANCA model is useful when the tool is linked to management practices. 
+		The efficiency of forage production in terms of nutrient in- and outputs becomes more and more important in modern dairy farming. Forage production depends among others on soil quality, fertilization and other pasture management actions. It is known that fertilization practices affects the quality and composition of herbage directly, but there are not much studies that links soil fertility with herbage quality under practical conditions \citep{Reijneveld2014}. In terms of farm nutrient management, the aim is to  distribute the available amount of fertilizer and manure optimally. Therefore, the nutrient usage as well as the SOM mineralization has to be considered over time. It will also pay of in nutrient use efficiency to consider spatial soil differences of farms in order to optimize nutrient  distribution over all fields within a farm.  A first step is the development of the instrument Annual Nutrient Cycling Assessment (ANCA, dutch: 	\href{http://www.wageningenur.nl/nl/show/KringloopWijzer-2.htm}{\textit{Kringloopwijzer}}). The ANCA instrument is developed to presents a clear overview of individual farm nutrient cycles \citep{Aarts2013}. The ANCA model is a monitoring instrument that takes into account all possible nutrients flows. All fluxes can be described by existing data of the whole farm (Figure \ref{fig:KLW}). This tool has high potential for governmental regulations, farm management advice and it provides knowledge and data for fundamental and applied research. However, a disadvantage of the ANCA system is that the soil part is not yet implemented. It is not fully understood in what extend soil processes have influence on for example leaching or crop uptake under certain circumstances.  For optimal dairy farm soil management, the ANCA model is useful when the tool is linked to management practices. 
         
       		\begin{figure}[ht]
 			\centering
@@ -114,19 +117,18 @@ The goal of this project is to get more insight in soil processes that influence
 			Significant and relevant interactions between soil fertility, N mineralization and forage production could only be identified when large data sets are available. In this project I will give a proof of concept where I will show a general pattern of how such study approach could be conducted. 
 			
 
-
 \chapter{State of the art} % Hoever zijn we in het onderzoek gekomen. Formuleren van nieuwe onderzoeksvragen
 	\label{chap: state of the art}
 
 
-\section{Soil fertility for dairy farms} 
-Soil fertility changes over time due to shifts in fertilization and soil management practices \citep{Hanegraaf2009}. Soil fertility is highly related to the organic matter content. The SOM content and quality is directly related to physical, chemical and biological soil functionality. The quality of SOM depends on its stability and composition what on its turn determines how fast the SOM is decomposed by soil microorganisms. There are many studies on the mineralization of SOM and on the N dynamics in soil \citep{Wander2004, Haynes2005,Ros2011}. However, yet clear relationships between SOM nutrient supply and other soil indicators remain elusive. N dynamics in soil plant relations varies between weather conditions and are difficult to study because N is available is many forms in the soil environment \citep{Nannipieri2009}. Hence, direct relations between SOM content and forage production are yet still unknown or vague \citep{Hanegraaf2009}. \citet{Reijneveld2014} suggested that relationships between soil characteristics and herbage quality may become more clear when linkage at field level can be made between soil and herbage characteristics. 
+\section{Soil fertility on dairy farms} 
+Soil fertility changes over time due to shifts in fertilization and soil management practices \citep{Hanegraaf2009}. Soil fertility is highly related to the organic matter content. The SOM content and quality is directly related to physical, chemical and biological soil functionality. The quality of SOM depends on its stability and composition what on its turn determines how fast the SOM is decomposed by soil microorganisms. There are many studies on the mineralization of SOM and on the N dynamics in soil \citep{Wander2004, Haynes2005, Ros2011}. However, yet clear relationships between SOM nutrient supply and other soil indicators remain elusive. N dynamics in soil plant relations varies between weather conditions and are difficult to study because N is available is many forms in the soil environment \citep{Nannipieri2009}. Hence, direct relations between SOM content and forage production are yet still unknown or vague \citep{Hanegraaf2009}. \citet{Reijneveld2014} suggested that relationships between soil characteristics and herbage quality may become more clear when linkage at field level can be made between soil and herbage characteristics. 
 
 \section{Predicting N supply }
 \subsection{N mineralization}
 Understanding N mineralization is essential to provide optimal fertilizer recommendations for the highest N utilization. N mineralization is the conversion of organic N to \ce{NH4+} and is done by soil microbes.  This influence the amount of the for plants available N in soil \citep{Myrold2008, Geisseler2010}. Soil microbes influence SOM cycling not only via decomposition but also because microbial products are themselves important components of SOM. Mineralization is almost always accompanied by immobilization of N \citep{Powlson1993}. We mean net mineralization when talking about mineralization. 
 
-In general, N mineralization over time for a certain amount of soil  follows the curve showed in Fig. \ref{fig:intro_Ncum}. Three characteristics of this curve are important. 
+In general, N mineralization over time for a certain amount of soil  follows the curve showed in Figure \ref{fig:intro_Ncum}. Three characteristics of this curve are important. 
 \begin{enumerate}
 	\item The mineralization rate at the start of the decomposition. Decomposition rates depend on the resource quality (how stable), characteristics of the decomposing organisms (e.g. C/N ratio) and environmental conditions (e.g. weather, mineralogy) \citep{Lavelle1993}. 
 	\item The potential N mineralization. This is the total N mineralized at equilibrium. The potential total N mineralization depends on the capacity and ability of the microbes to decompose the different fractions of SOM (ref)
@@ -140,7 +142,7 @@ In general, N mineralization over time for a certain amount of soil  follows the
 	\label{fig:intro_Ncum}
 \end{figure}
 
-Despite the fact that OM plays an important role in decomposition and nutrient supply, OM is not a good indicator for soil fertility in the field \citep{Hanegraaf2009}. Changes in OM content take place gradually and subtle, so small changes are difficult to detect \citep{Ghani2002, Hanegraaf2009}. Total (potential) N mineralization (Fig. \ref{fig:intro_Ncum}, (2)) is linked with the SOM content since the SOM provides the mineralizable N. However, this does not tell us anything about the mineralization rate (Fig.\ref{fig:intro_Ncum}, (1)), which give a better measure for the short term.  A preferred indicator would be the labile fractions of the organic pool, such as the easy biodegradable and extractable fractions, as shown in Fig. \ref{fig:intro_haynes} \citep{Haynes2005}. Those fractions are measurable parts of organic matter and not the theoretically defined pools of SOM \citep{Wander2004}. Several studies observed significant relationships between EOM fractions and the soil N mineralization \citep{Ros2011a,Ros2012}.  They concluded that for different studies distinct EOM fractions are identified as the best predictor of mineralizable N, depending on presumably the regions, years, seasons, land uses and variations in the analysis reproducibility of extraction methods \citep{Ros2011}. This suggests that the search for the best predictor of mineralizable N cannot be fulfilled by statistical analysis alone, and emphasize the need for studying the underlying mechanisms \citep{Ros2011}. 
+Despite the fact that OM plays an important role in decomposition and nutrient supply, OM is not a good indicator for soil fertility in the field \citep{Hanegraaf2009}. Changes in OM content take place gradually and subtle, so small changes are difficult to detect \citep{Ghani2002, Hanegraaf2009}. Total (potential) N mineralization (Figure \ref{fig:intro_Ncum}, (2)) is linked with the SOM content since the SOM provides the mineralizable N. However, this does not tell us anything about the mineralization rate (Figure\ref{fig:intro_Ncum}, (1)), which give a better measure for the short term.  A preferred indicator would be the labile fractions of the organic pool, such as the easy biodegradable and extractable fractions, as shown in Figure \ref{fig:intro_haynes} \citep{Haynes2005}. Those fractions are measurable parts of organic matter and not the theoretically defined pools of SOM \citep{Wander2004}. Several studies observed significant relationships between EOM fractions and the soil N mineralization \citep{Ros2011a,Ros2012}.  They concluded that for different studies distinct EOM fractions are identified as the best predictor of mineralizable N, depending on presumably the regions, years, seasons, land uses and variations in the analysis reproducibility of extraction methods \citep{Ros2011}. This suggests that the search for the best predictor of mineralizable N cannot be fulfilled by statistical analysis alone, and emphasize the need for studying the underlying mechanisms \citep{Ros2011}. 
 
 	\begin{figure}[h]
 		\includegraphics[width=1\linewidth]{intro_haynes}
@@ -164,7 +166,7 @@ Literature shows that the biological available N pool is related to a.o. the fol
 %  Klopt niet, nog aanpassen. Schimel zegt wat anders
 %
 	
-	\item \textbf{Potential nitrogen mineralization (PNM)}. The PNM is an \textbf{aerobic mineralization} analysis method. The PNM is defined as the total mineralized N over 12 weeks or the rate of mineral N production over the 12 weeks (slope of cumulative Nmin curve, see Fig. \ref{fig:intro_Ncum}) of the aerobic incubation. Numerous methods have been developed, what is nicely described by a.o. \citet{Doran1996} and \citet{Canali2005}.
+	\item \textbf{Potential nitrogen mineralization (PNM)}. The PNM is an \textbf{aerobic mineralization} analysis method. The PNM is defined as the total mineralized N over 12 weeks or the rate of mineral N production over the 12 weeks (slope of cumulative Nmin curve, see Figure \ref{fig:intro_Ncum}) of the aerobic incubation. Numerous methods have been developed, what is nicely described by a.o. \citet{Doran1996} and \citet{Canali2005}.
 	
 	\item \textbf{Biological fertility indicator (BFI)}. The BFI is the \textbf{anaerobic mineralization} analysis method. The BFI is defined as the total mineralized N in 7 days under anaerobic conditions.
 	
@@ -179,13 +181,13 @@ Literature shows that the biological available N pool is related to a.o. the fol
 	There are various techniques for predicting biological available N \citep{Haynes2005}. It can be done by chemical extraction methods or biological incubation methods, but none of these methods is universally accepted \citep{Nannipieri2009}. The mineralization can be simulated in relation to abiotic soil properties or biological indicators. The potential N supply over a period could be predicted by simulation models which are widely available \citep{Manzoni2009}. A nice example is the MINIP model \citep{Janssen1984}, which is used in the Netherlands in several tools for soil management recommendations. Those mineralization models are refined over time for research and for practical usage \citep{Yang2000,Postma2004}.  However, those models are not used in the Netherlands for prediction the mineralization on grassland soils. This is probably because it is difficult to calibrate the models for each specific field due to the heterogeneity of the fields \citep{Ros2015}. 
 		
 \subsection{Current N recommendations in the Netherlands} % Hanegraaf Zand rapport
-Currently, most standard soil management advises for farmers consists of general analyses concerning nutrient amounts in the soil. At present, in the Netherlands, the fertilizer N recommendations of grasslands are build on the Non Fertilizer N Supply (NFNS, Dutch: NLV), which is based on the work of \citet{Hassink1995a}. The NFNS is defined as the N uptake on unfertilized plots and is calculated by regression models based on the organic N content in the top 0-10 cm soil layer \citep{Bemestingscommissie2012}. The NFNS does only superficially take into account the different biodegradability of the SOM pools and environmental conditions. The predictions seem not to be accurate for today measurements, as shown for example in Fig. \ref{fig:intro_ros}. Deviations from the NFNS predictions are up to 100 kg N per ha, so the farmer does not get fully insight in the potential of the soil to make nutrients free for plant uptake. Hence, it is recommended to upgrade the current fertilizer N recommendations \citep{Hanegraaf2009, VanEekeren2010, Ros2015}. Another issue is that for the fertilizer N recommendations for both grassland and arable soils the same name (NFNS) is used, while different protocols are carried out. For arable soils the recommendations are based on the MINIP model of \citet{Janssen1984} and soil samples are taken from the 0-20 cm soil layer (tilling depth). (\textbf{Waar? uitleg..})\\
+Currently, most standard soil management advises for farmers consists of general analyses concerning nutrient amounts in the soil. At present, in the Netherlands, the fertilizer N recommendations of grasslands are build on the Non Fertilizer N Supply (NFNS, Dutch: NLV), which is based on the work of \citet{Hassink1995a}. The NFNS is defined as the N uptake on unfertilized plots and is calculated by regression models based on the organic N content in the top 0-10 cm soil layer \citep{Bemestingscommissie2012}. The NFNS does only superficially take into account the different biodegradability of the SOM pools and environmental conditions. The predictions seem not to be accurate for today measurements, as shown for example in Figure \ref{fig:intro_ros}. Deviations from the NFNS predictions are up to 100 kg N per ha, so the farmer does not get fully insight in the potential of the soil to make nutrients free for plant uptake. Hence, it is recommended to upgrade the current fertilizer N recommendations \citep{Hanegraaf2009, VanEekeren2010, Ros2015}. Another issue is that for the fertilizer N recommendations for both grassland and arable soils the same name (NFNS) is used, while different protocols are carried out. For arable soils the recommendations are based on the MINIP model of \citet{Janssen1984} and soil samples are taken from the 0-20 cm soil layer (tilling depth). (\textbf{Waar? uitleg..})\\
 %review NLV: Bussink 2002
 %weer: Ros&Bussink 2012
 
 		\begin{figure}[t]
 			\includegraphics[width=1\linewidth]{intro_ros}
-			\caption{Relation between N-total and the predicted N supply (NFNS) in compared with data from experiments on sandy soils. The accuracy of the predictions is currently still too low. Note that the data comes from samples from the 0-20 cm soil layer (normally the samples for grassland soils comes from the 0-10 cm layer.) Source:   \citet{Ros2015}, data confidential.}
+			\caption{Relation between N-total and the predicted N supply (NFNS) compared with data from experiments on sandy soils. The accuracy of the predictions is currently still too low. Note that the data comes from samples from the 0-20 cm soil layer (normally the samples for grassland soils comes from the 0-10 cm layer.) Source:   \citet{Ros2015}, data confidential.}
 			\label{fig:intro_ros}
 		\end{figure}
 		
@@ -196,9 +198,8 @@ European countries have more of less fixed N-application standards (maximum allo
 USA: Illinois Soil Nitrogen Test (ISNT)...measures a soil's ability to slowly provide nitrogen to the crop during the growing season.
 
 \subsection{Future}
- In the ideal situation the farmer knows what amount of N is available for crop growth at each time period, so he can adjust fertilization rates on the grass requirements. Therefore, other variables that influence the N mineralization, such as weather conditions and organic matter quality, should maybe been considered in prediction models \citep{Ros2015}. 
+ In the ideal situation the farmer knows what amount of N is available for crop growth at each time period, so he can adjust fertilization rates on the grass requirements. Therefore, other variables that influence the N mineralization, such as weather conditions and SOM related characteristics and other variables (e.g. textural properties) should been considered in prediction models \citep{Ros2015}. The N fertilization recommendation tool \textit{'Dynamic N Advice'}, which is under construction by NMI, is an attempt to take into account the weather conditions.  It makes usage of location based weather predictions (KNMI data), an updated version of the NFNS advice, the mineralization model MINIP, a simple grass growth model and district averages of soil characteristics (BLGG data). A data flow scheme of the Dynamic N Advice can be found in Appendix \ref{chap: dynN}.
 
-	
 
 
 	
@@ -248,7 +249,7 @@ The statistical models are validated with data that is collected from dairy farm
 All validation data can be found in Appendix \autoref{chap: Validation data}.
 
 \subsection{Field selection and sampling}
-Soils were collected from grassland soils at four dairy farms in Friesland. The chosen fields are also used for other research of NMI on the dynamic spatial and temporal nitrogen behavior. All fields ranged from 2.5-5.3 ha and consists of sandy soils, with some loamy characteristics. %misschien meer over zeggen? 
+Soils were collected from grassland soils at four dairy farms in Friesland (Table \ref{tab:results_farms} ). The chosen fields are also used for other research of NMI on the dynamic spatial and temporal nitrogen behavior. All fields ranged from 2.5-5.3 ha and consists of sandy soils, with some loamy characteristics. %misschien meer over zeggen? 
 
 \begin{table}[ht] %Table Field information
 	\caption{Field information and soil characteristics of the top layer (0-10 cm) for the growing season of 2015 (Sampling on 06/16/2015) }
@@ -264,12 +265,12 @@ Soils were collected from grassland soils at four dairy farms in Friesland. The 
 		C & Nijeberkoop & Lat: 52.96 Lon: 6.19 & 6.8& $<$1& 2820& 5.9\\
 		D & Appelscha & Lat: 52.96 Lon: 6.42 & 7.3& 2& 2890& 5.6\\		 \bottomrule
 	\end{tabu}
-	
+		\label{tab:results_farms}
 \end{table}
 
-Each grassland field was harvested several cycles and was alternately cut for silage and grazed. The initial protocol was that within a week before each cutting upward of the second cutting, we should have taken a sample of the fields \ref{fig:mm_samples} and subsequently analyze the samples for the indicators. Because of the diversity in farming methods (grazing or not) and differences in cutting times, we toke samples at fixed dates.  Even when grazing was applied, a sample was taken at the same time as it was done from the other fields. Samples were taken on 06/16/2015, 07/03/2015, 03/08/2015 and 04/09/2015. All samples were taken from the 0-10 cm top soil layer of each field. Per sample, $>$70 sub samples were taken in W-pattern. The heterogeneity of the soils was analyzed to give the farmers insight in the spatial soil characteristics within their fields. To do so, different samples were taken from characteristic field areas for each farm on 07/03/2015 (Appendix \ref{chap: study1}).
+Each grassland field was harvested several cycles and was alternately cut for silage and grazed. The initial protocol was that within a week before each cutting upward of the second cutting, we should have taken a sample of the fields \ref{fig:mm_samples} and subsequently analyze the samples for the indicators. Because of the diversity in farming methods (grazing or not) and differences in cutting times, we toke samples at fixed dates.  Even when grazing was applied, a sample was taken at the same time as it was done from the other fields. Samples were taken on 06/16/2015, 07/03/2015, 03/08/2015 and 04/09/2015. All samples were taken from the 0-10 cm top soil layer of each field. Per sample, $>$70 sub samples were taken in W-pattern. 
 
-\begin{figure}[h] %Fig. Sampling Time Plan
+\begin{figure}[h] %Figure Sampling Time Plan
 	\includegraphics[width=1\linewidth]{mm_samples}
 	\caption{Sample time plan of the Friesland samples. The first cycle was missed. From the second to the last cycle, the BFI and the HWC was measured. For the second cycle, the NIRS analyses was done. For the third cycle, the samples for the PNM analysis were taken. From the third to the last cycle, the herbage indicators were determined (relevant: crude protein (CP). }
 	\label{fig:mm_samples}
@@ -279,14 +280,14 @@ Each grassland field was harvested several cycles and was alternately cut for si
 Soil samples were mixed by hand and passed through a 5-mm sieve. Big roots and grass leafs are removed. The samples were stored field-moist at a temperature of 4 °C. Analysing methods are done within 10 days after sampling. 
 The complete protocols used for the chemical and physical analysis are described in Appendix \ref{chap: Protocols}. In short the following procedures were done. 
 
-\subsubsection{How water extractable carbon}
-The HWC was determined according to the method used by \citet{Ghani2003}. First 30 ml of distilled water was added to  3 g of dried soil. The tubes were shaken in a vortex shaker during 30 min, centrifuged at 3600 rpm during 20 min. Subsequently, 30 ml of water was added to the settlement. The tubes were shaken 30 min and next were placed in a stove at 80 ˚C during 16 hours. Afterwards, the tubes were centrifuged at 3600 rpm during 20 min. Finally, the supernatant were filtered using a 0.45 µm filter and the DOC was analyzed using a TOC analyzer. 
+\subsubsection{How water extractable carbon (HWC)}
+The HWC was determined according to the method used by \citet{Ghani2003}. In this method the first step involved removal of readily soluble C from the samples. The second step was extraction of labile components of C at 80 \degree C for 16 h. This is referred to as hot-water extractable carbon (HWC).
 
-\subsubsection{Aerobic nitrogen mineralization}
-The PNM was determined according to the protocol described by \citet{Ros2014}. Sample moister contents were set to about 60\% of the water holding capacity (WHC). The WHC was determined by the addition of water to dried soil until it became saturated and a water film was growing on the surface. Subsequently, 100 g of the homogenized sample was put in polyethylene bags that were permeable for \ce{CO2} and \ce{O2} , but not for \ce{H2O} molecules. After sealing the samples were set in a room at constant temperature of 20°C. Samples were analyzed for mineral N by the BLGG lab after 1, 3, 6, 9 and 12 weeks. 
+\subsubsection{Aerobic N mineralization (PNM)}
+The PNM was determined according to the protocol described by \citet{Ros2014}. Here the samples are incubated for 12 weeks under aerobic conditions and 20 \degree C. Mineral N was determined at 1, 3, 6, 9 and 12 weeks after start of the incubation. 
 
-\subsubsection{BFI}
-The anaerobic mineralization incubation was conducted by the BLGG lab. The lab followed the procedure which is described by \citet{Hanegraaf2008} (Appendix \ref{chap: Protocols}). In short an anaerobic incubation of seven days was applied and thereafter the mineral N was determined. 
+\subsubsection{Anaerobic N mineralization (BFI)}
+The anaerobic mineralization incubation was conducted by the BLGG lab. The lab followed the procedure which is described by \citet{Hanegraaf2008} Here a anaerobic incubation of seven days was applied and thereafter the mineral N was determined. 
 %zie book 
 
 
@@ -294,41 +295,39 @@ The anaerobic mineralization incubation was conducted by the BLGG lab. The lab f
 \section{Statistical analysis}
 Data were analyzed with R (v. 3.1.3), using the RStudio IDE and a.o. the packages pls and lm. 
 \subsection{Calibration}
-Three data points were removed because they contained erroneous data (PNM was close to 0 or $<$ 0, see Appendix \ref{chap: Calibration data}). For the PNM, only validation data of \ce{NO3} is used, because accurate \ce{NH4} data were not available for the calibration data. 
+Three data points were removed because they contained erroneous data ($PNM\leq 0$). For the PNM, only validation data of \ce{NO3} is used, because accurate \ce{NH4} data were not available for the calibration data. 
 
 All data of one parameter set are log transformed when necessary to met the normality requirements (test of \citet{Shapiro1965}). Parameter sets were not normally distributed when grouping them into soil types. Data of the classical soil analysis is used, because the NIRS analysis are based on the classical analyses. When data of the classical soil analysis was not available, data of the NIRS analysis was used. This was not completely possible for the organic carbon measurements, because not all data was available for both the classical and the NIRS analysis. For anaerobic mineralization, the BFI that was determined on moist samples (BFI-m) was used in the statistical analysis. 
-Univariate partial least squares (PLS, \citep{Mevik2013}) regression was applied on the transformed data to get insight in the variation of the modeling approaches and to select the relevant parameters. For explanation about PLS regression, we refer to the interpretation paper of\citet{Garthwaite1994}. 
-Several models were made to predict the N mineralization on grassland soils. To get a first insight in the relative importance of the variables, a step wise regression was carried out which was based on the Akaike information criterion (AIC, \citep{Sakamoto1986}). Multi-linear models with interaction terms were made by trial and error. 
+
+
+Univariate partial least squares (PLS, as described in \citet{Mevik2013}) regression was applied on the transformed data to get insight in the variation of the modeling approaches and to select the relevant parameters. For explanation about PLS regression, we refer to the interpretation paper of\citet{Garthwaite1994}. 
+
+
+Multiple linear models were made to predict the N mineralization on grassland soils. To get a first insight in the relative importance of the variables, a step wise regression was carried out which was based on the Akaike information criterion (AIC, \citep{Sakamoto1986}). The models were made by trial and error with the criteria that all parameter values should be significantly (\textit{p}<0.05) contribute to the model. For evaluating the validity of the models we use the coefficient of variation and the analysis of residuals. 
+
+The best multiple linear model was chosen and calibrated for the whole data set as well as for only the mineral soils and only the sandy soils. 
 
 \subsection{Validation}
-The models are validated with the Friesland soil samples. All data is evaluated to see how large the difference is between the observed values and the predicted values. For evaluating the validity of the models we use the coefficient of variation and the analysis of residuals. 
+The calibrated models are validated with the Friesland soil samples. All data is evaluated to see the difference between the observed and the predicted values.  To interpret the results for field situations,  the units of the mineralization rate are converted from $mg\: kg^{-1}\: day^{-1}$ to $kg\:N\:ha^{-1}\: month^{-1}$. This conversion was based on the assumption of a mineralization depth of 10 cm and a  bulk density $(\rho)$ which is calculated using the following formula\footnote{This formula to calculate the bulk density is being used in the BLGG routine lab. parameter values are: $a=0.02525, b=0.6541, c=0.00000067, d=0.00007792, e=0.00314712, f=0.06039523, g=1.33932206$. }:
+\[\rho = if (Clay<8):\: {1/(a\cdot SOM+b)} \:\:else:\: {c\cdot SOM^4-d\cdot SOM^3+e\cdot SOM^2-f\cdot SOM+g}\]
+$SOM$ and $Clay$ are expressed in percentages and were the average values of the available data. 
 
 
+\section{Farm management}
+The heterogeneity of the soils was analyzed to give the farmers insight in the spatial soil characteristics within their fields. To do so, different samples were taken from characteristic field areas for each farm on 07/03/2015. 
 
-
+In addition, for the second and the third grass cycle, an N fertilization advice was made for each farm, using the Dynamic N Advice tool (ref). Advice for the second cycle was given on 05/11/2015  and advice for the third cycle was given on 07/15/2015. Input values for the model can be found in Appendix \ref{chap: dynN}. When data was not available, the model used default values or district averages. All farms were in the same region (Table \ref{tab:results_farms}), and closest to the KNMI weather station in Marknesse, Flevoland. The crude protein (CP) was analyzed from fifth to sixth cycle (Figure \ref{fig:mm_samples}) to evaluate if the crop uptake according to what was expected. 
 
 
 
 \chapter{Results}
 
-The results shows that the N mineralization could be predicted by some simple and multivariate linear models. However, 
+The results shows that the N mineralization could be predicted by simple and multivariate linear models. However, the accuracy of the predictions is very low. etc... % prediction intervals were smaller when the model was calibrate only on the mineral soils. 
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------
-\section{Calibration}
+\section{Calibration linear model}
 %-----------------------------------------------------------------------------------------------------------------------------------------------------------
 \subsection{Soil properties}
-The soils of the calibration set are collected from agricultural fields from over the Netherlands. The 21 soils consists of different clayey, sandy and peaty soils. Hence, they varied widely in their physical and chemical characteristics (Table \ref{tab: results_char}). The key factors varied between 17 and 71 mg N kg $^{-1}$ for the PNM rate and between 239-5099 mg C kg $^{-1}$ for HWC. 
-
-
-
-
-
-
-
-
-
- 
-  
-
+The soils of the calibration set are collected from agricultural fields from over the Netherlands. The 21 soils consists of different clayey, sandy and peaty soils. Hence, they varied widely in their physical and chemical characteristics (Table \ref{tab: results_char}). The key factors varied between 17 and 71 mg N kg $^{-1}$ wk$^{-1}$ for the PNM rate and between 239-5099 mg C kg $^{-1}$ for HWC. 
 
 	\begin{figure}[ht] % boxplots van bodemeigenschappen
 		
@@ -337,56 +336,79 @@ The soils of the calibration set are collected from agricultural fields from ove
 		\caption{Boxplots of key soil mineralization indicators grouped on soil type: dalgrond (\textit{n=4}), dekzand (\textit{n=4}), kleiig veen (\textit{n=3}), river clay (\textit{n=3}) and sea clay (\textit{n=3}). It shows  that much of the variation could be explained by soil type}
 		\label{fig:results_boxplots}
 	\end{figure}
-Fig. \ref{fig:results_boxplots} shows the variability of the key indicators for soil N mineralization. Much of the variation could be explained by the differences in soil types. This shows the disadvantage of combining all data. However, because the small data set, we will merge all soil types for the statistical analysis.
+Figure \ref{fig:results_boxplots} shows the variability of the key indicators for soil N mineralization. Much of the variation could be explained by the differences in soil types. This shows the disadvantage of combining all data. 
 
 \subsection{Soil indicators for N mineralization} 
 In this study there are four different biological essays on the N supply that can be used as indicator for the N mineralization. They consists of the aerobic long term measurements on dried soils (PNM), the anaerobic measurements on dried soils (BFI-d), the anaerobic measurements on moist soils (BFI-m) and the NIRS measurement of the BFI-m (BFI-nir). We assume the aerobic PNM the best predictor of the real mineralization, because it approximates the field conditions the most. Hence, the PNM is used as response variable. 
 
  \subsubsection{Aerobic mineralization rate as response variable} 
-During the 12 weeks aerobic mineralization, the cumulative mineral N (here \ce{NO3}) increased on average up to 35 mg kg$^{-1}$ for all soils (Fig. \ref{fig:results_Ncum}). Cumulative mineralization was the highest for peaty soils (47 mg kg$^{-1}$) and the lowest for clayey soils (24 mg kg$^{-1}$).  In the 12 weeks incubation period, we assume the N mineralization to be still in the linear phase (see Fig. \ref{fig:intro_Ncum}). Subsequently, we consider the slope of the cumulative N mineralization curve as an indicator for the N mineralization. The mean mineralization rate  is 0.19 mg N kg$^{-1}$ per day. Soil type had a strong effect on the mineralization rate: for sandy soils the average mineralization rate was 0.26 mg N kg$^{-1}$, for clay soils 0.14 mg N kg$^{-1}$  and for the peaty soils 0.34 mg N kg$^{-1}$. The variance was greatest for the sandy and lowest for the clayey soils. 
-	\begin{figure}[h] % Plotje van cumulative N min. Friesland data nog toevoegen.
-	\centering
-	\includegraphics[width=0.8\linewidth]{results_Ncum}
-	\caption{Cumulative aerobic N mineralization over time for the different soil types. Error bars denotes the standard error of the means. The mean mineralization rate (slope) of all soils is 0.19 mg N kg$^{-1}$ per day}
-	\label{fig:results_Ncum}
-\end{figure}
+During the 12 weeks aerobic mineralization, the cumulative mineral N (here \ce{NO3}) increased on average up to 35 mg kg$^{-1}$ for all soils (Figure \ref{fig:results_Ncum}). Cumulative mineralization was the highest for peaty soils (47 mg kg$^{-1}$) and the lowest for clayey soils (24 mg kg$^{-1}$).  In the 12 weeks incubation period, we assume the N mineralization to be still in the linear phase (see also Figure \ref{fig:intro_Ncum}). Subsequently, we consider the slope of the cumulative N mineralization curve as an indicator for the N mineralization. The mean mineralization rate  is 0.17 mg N kg$^{-1}$ per day. Soil type had a strong effect on the mineralization rate: for sandy soils the average mineralization rate was 0.26 mg N kg$^{-1}$, for clay soils 0.14 mg N kg$^{-1}$  and for the peaty soils 0.34 mg N kg$^{-1}$. The variance was greatest for the sandy and lowest for the clayey soils. 
 
-The soil indicators of the calibration data set shows various significant correlations (Fig. \ref{fig:results_corr}), despite of the high variation in soil characteristics (Fig. \ref{fig:results_boxplots}). As expected, in particular the indicators for labile organic matter (BFI, HWC, Resp) shows significant positive correlation with the aerobic mineralization rate. Indicators for organic matter show somewhat less correlation with the aerobic mineralization rate compared with the anaerobe mineralization (BFI-n).
+The soil indicators of the calibration data set shows various significant correlations (Figure \ref{fig:results_corr}), despite of the high variation in soil characteristics (Figure \ref{fig:results_boxplots}). As expected, in particular the indicators for labile organic matter (BFI, HWC, Resp) shows positive correlation with the aerobic mineralization rate (r > 0.77). Indicators for organic matter show somewhat less correlation with the aerobic mineralization rate compared with the anaerobe mineralization (BFI-n). Correlation plots for the variables of  only the mineral soils or only the sandy soils  show that the labile organic matter indicators are less correlated for the clayey soils compared with the sandy soils  (Appendix \ref{chap:corr}). Also, for the clay soils there is hardly (r = 0.3) any correlation between the PNM and N total. Remarkable is the  correlation between PNM and respiration, which is negative (r = -0.8)  for the clayey soils and the positive (r = 0.8) for the sandy soils. All correlation plots show a positive correlation between OM, N total and C total (r > 0.8). The peaty soils shows much strong correlations, however this s caused by the low number of peaty soils (n = 3) where one is deviating strong of the other two. 
 	\begin{figure}[h] %Correlatie matrix
 	\centering
 	\includegraphics[width=0.7\linewidth]{results_corr}
-	\caption{Correlation matrix. Red numbers denote negative and blue positive correlations. Lower color intensity indicates less correlation.}
+	\caption{Correlation matrix of all variables for the whole data set.  Red numbers denote negative and blue positive correlations. Lower color intensity indicates less correlation. Correlation plots for the variables of  only the mineral soils or only the sandy soils can be found in Appendix \ref{chap:corr}}.
 	\label{fig:results_corr}
 \end{figure}
 
-The variability of the PNM rate (mg N kg$^{-1} $ day$^{-1}$ ) is mainly explained by a component that is related to organic matter. This is shown in the PLS output in Fig. \ref{fig:results_pls}. Highest related indicators were HWC, respiration, C/N ratio, BFI, pH, Silt and CEC. This component explains about 37\% of the variability around the prediction of the PNM rate. The second explanatory component is probably related to more chemical-physical properties of the soils, though this were weak relationships and it only explains 13\% of the variability. However, when applying PLS analysis with the BFI as response factor, it becomes more clear that also textural characteristics also have a (minor) influence on the response. 
-	\begin{figure}[h] % Plotje PLS output.
-	\includegraphics[width=1\linewidth]{results_pls_pnmbfi}
-	\caption{PLS outputs for the prediction of aerobic and anaerobic N mineralization \textbf{A.} PLS regression for the prediction of the aerobic PNM rate. The first component explained 37\% of the variance and the second component 13\%. \textbf{B.} PLS regression for the prediction of BFI. The first component explained 35\% of the variance and the second component 19\%. It becomes clear from both pictures that the most of the variance is explained by the component that is related to organic matter.}
-	\label{fig:results_pls}
-\end{figure}
+PLS analysis showed that the variability of the PNM rate (mg N kg$^{-1} $ day$^{-1}$ ) is mainly explained by a component that is related to organic matter (Appendix \ref{chap:PLS}). Highest related indicators were HWC, respiration, C/N ratio, BFI, pH, Silt and CEC. This component explains about 34\% of the variability around the prediction of the PNM rate. The second explanatory component is probably related to more chemical-physical properties of the soils, though this were weak relationships and it only explains 14\% of the variability. The same relations were showed in the PLS analysis for the BFI, the anaerobic mineralization. Total explained variability did not change when only considering the mineral soils, it produced about the same results. However, when applying PLS regression only on the sandy soils, the explained variability increased a few percentage compared with the PLS regression applied on the whole data set. For the sandy soils, the first component explains 40\% and the second component explained 15\% 
 
 
 \subsubsection{Descriptive models for prediction of N mineralization}
-PNM was significant related to the indicators for labile organic matter: HWC (R$^{2}$=0.7, \textit{p} $<$0.001), Resp (R$^{2}$=0.6, \textit{p} $<$0.01) and BFI (R$^{2}$=0.6, \textit{p} $<$0.01). The direct relationship with OM was relatively poor (R$^{2}$=0.4, \textit{p} $<$0.01). Fig. ...shows the simple linear relation of HWC with the mineralization rate. Simple linear model plots of other indicators for labile organic mattter can be found in Appendix \ref{chap:Model output}.
+PNM was significant related to the indicators for labile organic matter: HWC (R$^{2}$=0.7, \textit{p} $<$0.001), Resp (R$^{2}$=0.6, \textit{p} $<$0.01) and BFI (R$^{2}$=0.6, \textit{p} $<$0.01). The direct relationship with OM was relatively poor (R$^{2}$=0.4, \textit{p} $<$0.01). The relation between HWC, the mineralization rate and OM is shown in Figure \ref{fig:results_pnm_hwc}. The intercept term significantly contributed to the model.  Simple linear model plots of the other indicators for labile organic matter can be found in Appendix \ref{chap:Model output}.
 
+	\begin{figure}[h] %pnm~hwc
+	\centering
+	\includegraphics[width=0.7\linewidth]{results_pnm_hwc}
+	\caption{Relation between HWC and OM. Linear model was based on the log transformed values. The grey lines denote the prediction interval. Red circles indicate the outliers. Triangles show the validation values of the Friesland farms.}.
+	\label{fig:results_pnm_hwc}
+\end{figure}
 
-Table \ref{tab: results_mods} (Appendix) shows significant (\textit{p}$<$0.001) models for the prediction of N mineralization. For all models, the p values of the parameter estimates are significant. For most models, the adjusted coefficient of variation was $>$0.7, so correct relations could be fitted. However, the standard errors of the prediction (SE-pred) are very large relatively to the PNM rate values. The log values of the PNM rate are all between 0 and 2 while the SE-pred of all models are above 1.2.   According to the Akaike information criterion (AIC), which gives a measure of the relative quality of the different models, the models with one of Resp, HWC and C-tot included are preferred above the other models.  It especially turns out that addition of Resp in the multivariate approach ends up in more significant models. This is what we expected, because the single relation of Resp with PNM was relatively high compared with the other variables. However, the AIC gives not a absolute measure of the models. The Bayesian information criterion (BIC), which is closely related to the AIC, gives about the same results. 
+There were multiple significant  (\textit{p}$<$0.001) models possible for the prediction of the N mineralization rate. Table \ref{tab: results_mods} in the appendix shows some appropriate models for the prediction of N mineralization rate. For all models, also the parameter estimates were significant. For most models, the adjusted coefficient of variation was $>$0.7. The standard errors of the prediction (SEP) were  relatively large compared with the mineralization rates (mean = 0.25 mg kg$^{-1}$ d$^{-1}$), what was in line with the large standard deviation of the calibration data (sd = 0.17 mg kg$^{-1}$ d$^{-1}$).  According to the Akaike information criterion (AIC), which gives a measure of the relative quality of the different models, the models with one of Resp, HWC and C-tot included are preferred above the other models.  It especially turns out that addition of Resp in the multivariate approach ends up in more significant models. This is what we expected, because the single relation of Resp with PNM was relatively high compared with the other variables. The Bayesian information criterion (BIC), which is closely related to the AIC, gives about the same results. However, those criteria gives not a absolute measure of the models. 
+
 Statistically, the best model was the one with Resp as main factor plus an interaction term between C-tot and sand. However, the only (suggestive) explanation could be the protection of SOM by the sand.  We do not have a convincing explanation for this interaction, so we reject the validity of this model. 
+
  The second best model we identified was the model were HWC is interacting with OM, what is an understandable interaction.  HWC is expected to be measured with the NIRS method in future \citep{Vasques2009}, what is a for implementation in routine labs. This is an advantage over respiration, which is quite difficult to analyze. For the above reasons, we choose model 8 for the validation. With the parameter estimates this model is: 
 \begin{equation} %choossen model
-Mineralization\  rate = 0.13\cdot HWC -1.05\cdot OM +0.15\cdot HWC\times OM
+Mineralization\  rate = a\cdot HWC +b\cdot OM +c\cdot HWC\times OM
 \label{eq: model}
-\end{equation}The \textit{p} values of the estimates are $<$0.001, 0.01 and 0.003 for respectively HWC, OM and the interaction between HWC and OM. 
-Additional model parameters and characteristics can be found in Appendix \ref{chap:Model output}. Note that this relationship should be applied to the log transformed values of PNM, HWC and OM. 
+\end{equation}
+The parameter estimates for HWC, OM, the interaction between HWC and OM and the intercept with corresponding p values are shown in Table \ref{tab:parameters}. All models were highly significant (\textit{p}<0.001). For none of the models, the intercept term was significant. Additional model output can be found in Appendix \ref{chap:Model output}. Note that this relationship should be applied to the log transformed values of PNM, HWC and OM. 
+
+\begin{table}[h] %Table Field information
+	\caption{Parameter estimates of the model (Equation \ref{eq: model})calibrated for all soils, only the mineral soils and only the sandy soils. All models were highly significant (\textit{P}<0.001)}
+	\footnotesize 
+	\renewcommand{\arraystretch}{1.2}
+	
+	
+	\begin{tabu} to \textwidth{@{}X[1.2,l]X[c]X[c]X[c]X[c]X[c]@{}}% {@{}rrrrrrr@{}} 
+		\toprule	\rowfont{\bfseries}
+        & a \quad $(HWC)$	&b \quad $(OM)$ &c $(HWC\times OM)$  & R$^{2}$ model\\ \midrule
+     Whole data set &0.13 (\textit{p}<0.001)&-1.05 (\textit{p}<0.05)&0.15 (\textit{p}<0.01)&0.96\\
+     Mineral soils &&&&&\\
+     \quad Option 1&0.12 (\textit{p}<0.001)&$-$&$-$&0.83\\
+     \quad Option 2&$-$&0.50 (\textit{p}<0.001)&$-$&0.80\\
+     Sandy soils&&&&\\
+     \quad Option 1&0.15 (\textit{p}<0.001)&$-$&$-$&0.94\\
+     \quad Option 2&$-$&0.59 (\textit{p}<0.001)&$-$&0.94\\
+        \bottomrule
+	\end{tabu}
+		\label{tab:parameters}
+\end{table}
 
 
 
 
 
-\section{Validation}
+
+\section{Validation linear model}
 Measured values for the labile organic matter indicators varied widely (\ref{fig:results_valbox}). Variation was highest for the aerobic PNM rate, which is explainable because these consists of two measurements for each farm which are taken from two distinctly different parts of the fields. It is remarkable that for farm B all values are relatively low compared with the other farms. All validation data can be found in Appendix \ref{chap: Validation data}.
-Note that for the validation of the selected model, the values for HWC were the averages of the HWC measurements over the season and OM was only determined on 07/03/2015 (Fig. \ref{fig:mm_samples}).
+Note that for the validation of the selected model, the values for HWC were the averages of the HWC measurements over the season and OM was only determined on 07/03/2015 (Figure \ref{fig:mm_samples}).
+% * <jobdepater@gmail.com> 2015-10-09T09:33:09.014Z:
+%
+% 
+%
 
 	\begin{figure}[ht] % boxplots soil indicators per Farm
 		\centering
@@ -395,11 +417,19 @@ Note that for the validation of the selected model, the values for HWC were the 
 		\label{fig:results_valbox}
 	\end{figure}
 
-The model to predict the aerobic PNM rate (Model\ref{eq: model}) underestimates the real measurements for the validation data (Fig. \ref{fig:results_val}).  
-Fig. \ref{fig:val_m} shows that predictions are more uncertain for higher mineralization rates. The uncertainty for the mineralization prediction ranges from 0.2 till above 1.0 mg N kg$^{-1}$ day$^{-1}$.   All measured values are within the prediction interval. 
+\subsection{Model validation}
+The calibrated model (Model \ref{eq: model}) is validated on the Friesland soils. When the model was calibrated on the mineral soils, the measured values are closest to the predicted values. 
 
-Fig. \ref{fig:val_ncum} shows that the predicted mineralization rates are smaller than the measured values suggests.  
-In addition, the linear relationship plots (Fig. \ref{fig:results_models}) shows deviations from predicted values. This is especially the case for  farms B and C which fall out of the prediction interval. 
+\subsubsection{Whole data set}
+The model that is calibrated on the whole data set underestimates the real measurements for the validation data (Figure \ref{fig:results_val}).  
+Figure \ref{fig:val_m} shows that predictions are more uncertain for higher mineralization rates. The uncertainty for the mineralization prediction ranges from 0.2 till above 1.0 mg N kg$^{-1}$ day$^{-1}$.   All measured values are within the prediction interval. 
+
+Figure \ref{fig:val_ncum} shows that the predicted mineralization rates are smaller than the measured values suggests.  
+In addition, the linear relationship plots (Figure \ref{fig:results_models}) shows deviations from predicted values. This is especially the case for  farms B and C which fall out of the prediction interval. 
+
+\subsubsection{Mineral soils}
+\subsubsection{Sandy soils}
+
 
 \begin{figure}
 \subfigure[Predicted values plotted versus measured values.]{
@@ -421,7 +451,45 @@ In addition, the linear relationship plots (Fig. \ref{fig:results_models}) shows
 
 	
 	
+\section{Farm management}
+The four farms were 
+
+\subsection{N fertilization recommendation}
+
+\subsubsection{Weather conditions}
+ Winter 2014/2015 was relatively mild with a few cold periods in January and February. The weather conditions in spring followed the long term averages. Precipitation was relatively high in January, but during the following moths the cumulative precipitation shortage compared with the long term average was 60 mm on 05/11/2015 and 150 mm on 07/15/2015 (Figure , so the soils were relatively dry. 
+
+\subsubsection{Dynamic N advice}
+Old en new recommendations are shown in Table \ref{results_dynN}. In general the advice was to apply less N
+
+\begin{table}[h] %Table Field information
+	\caption{Parameter estimates of the models}
+	\footnotesize 
+	\renewcommand{\arraystretch}{1.2}
 	
+	
+	\begin{tabu} to \textwidth{@{}X[3,l]X[l]X[l]X[l]X[l]X[l]X[l]X[l]X[l]@{}}% {@{}rrrrrrr@{}} 
+	\toprule \rowfont{\bfseries}
+     & \multicolumn{2}{c}{Farm A} & \multicolumn{2}{c}{Farm B} & \multicolumn{2}{c}{Farm C} & \multicolumn{2}{c}{Farm D} \\
+              & Cycle 2      & Cycle 3     & Cycle 2      & Cycle 3     & Cycle 2      & Cycle 3     & Cycle 2      & Cycle 3     \\ \midrule
+Old recommendation     & 50           &             & 46           &             & 17           &             & 17           &             \\
+New recommendation   & 60           &             & 51           &             & 25           &             & 17           &             \\ \\
+N supply (total)   & 82.4         &             & 56.5         &             & 37.7         &             & 42.9         &             \\
+\quad NFNS    & 28.4         &             & 8.2          &             & 10.5         &             & 9.4          &             \\
+\quad Deposition     & 3.1          &             & 2.4          &             & 2.7          &             & 2.7          &             \\
+\quad fertilization previous cycles & 50.9         &             & 45.9         &             & 24.5         &             & 30.8         &             \\
+      
+N losses     & 16.48        &             & 11.3         &             & 7.54         &             & 8.58         &             \\
+Crop uptake      & 74           &             & 56.6         &             & 37.7         &             & 42.9         &             \\
+Toe te voegen & 8.08         &             & 11.4         &             & 7.54         &             & 8.58         &             \\ \bottomrule
+    
+	\end{tabu}
+		\label{tab:results_dynN}
+\end{table}
+
+
+\subsection{Soil heterogeneity within fields}
+
 
 
 \chapter{Discussion}
@@ -434,13 +502,13 @@ DATA:
 
 \section{Prediction of N mineralization}
 \subsection{Cumulative N mineralization}
-The curves of the cumulative N mineralization of the calibration data showed high variation (Fig. \ref{fig:results_Ncum}, SE of mean), which is probably mainly caused by the high heterogeneity of the soils. It is not clear from the figure that the curve is linear, but we assume the slope to be more or less  constant because in the 12 weeks of incubation the potential could not be reached regarding other measurements as for example in studies of \citet{Ros2011} or \citet{Dessureault-Rompre2013}.
-The mineralization of the Friesland soils has about the same signatures as shown in Fig. ... However, 
+The curves of the cumulative N mineralization of the calibration data showed high variation (Figure \ref{fig:results_Ncum}, SE of mean), which is probably mainly caused by the high heterogeneity of the soils. It is not clear from the figure that the curve is linear, but we assume the slope to be more or less  constant because in the 12 weeks of incubation the potential could not be reached regarding other measurements as for example in studies of \citet{Ros2011} or \citet{Dessureault-Rompre2013}.
+The mineralization of the Friesland soils has about the same signatures as shown in Figure ... However, 
 
 \subsection{Simple relationships  }
 Significant relations are identified between the indicators for labile organic matter and the aerobic mineralization rate. This becomes clear from Figs \ref{fig:results_corr}, \ref{fig:results_pls} and \ref{fig:results_models}. The PLS regression suggests that two linear combinations that explain the variability of the PNM rate. The first component explains about 37\% of the variability and seems to be explained by mainly organic matter characteristics. This makes sense because mineralization depends a.o. on the availability and characteristics of organic matter. Results also show that the second component is explained by more physical and textural characteristics. This becomes more clear for the prediction of the anaerobic mineralization (BFI), probably due to fact that the BFI is determined on short term (7 days). A possible explanation is that in this short period more organic matter is still physical protected (ref?).
 
-Of course there is a relation between the SOM content and the N mineralization since N is mineralized from the organic materials in the soil. In our study we also find a correlation between the OM content and the PNM rate, but the linear model itself was not very good (Fig. \ref{fig:results_models}, Table \ref{tab: results_mods}). This is probably due to the variability caused by the fact that the OM content also consists of stable organic matter that is not mineralized in short term.  Additionally, the total nitrogen (N-tot) and carbon (C-tot) contents were correlated with the PNM rate, suggesting that the mineralization is also influenced by the total N and C contents. The main food for soil microbes is C and N, so this correlation is explainable.   
+Of course there is a relation between the SOM content and the N mineralization since N is mineralized from the organic materials in the soil. In our study we also find a correlation between the OM content and the PNM rate, but the linear model itself was not very good (Figure \ref{fig:results_models}, Table \ref{tab: results_mods}). This is probably due to the variability caused by the fact that the OM content also consists of stable organic matter that is not mineralized in short term.  Additionally, the total nitrogen (N-tot) and carbon (C-tot) contents were correlated with the PNM rate, suggesting that the mineralization is also influenced by the total N and C contents. The main food for soil microbes is C and N, so this correlation is explainable.   
 
 Highest correlation was found for Resp, suggesting a relation between C respiration and N mineralization. This seems logical, because in the mineralization process both mineral N (\ce{NO3-}, \ce{NH4+}) and \ce{CO2} is released.  This biological essay is a good estimator of the N mineralization on short term, but unfortunately it seems difficult to analyze \citep{Bloem2005} book). Hence, the Resp is not a good indicator for practical usage in routine labs.  
 
@@ -452,11 +520,11 @@ A significant relation is identified between the aerobic mineralization rate and
 Most of analyzed linear models for the prediction of the aerobic mineralization rate had a relatively high ($>$0.7) adjusted R$^{2}$, suggesting good relationships. However, the variance was relatively high causing large prediction intervals.  
 The chosen interaction model (Equation \ref{eq: model}) was the best one in our opinion. First of all, combining the stability characteristics of SOM with the total SOM content gives a good measure of the short term. Additionally,  HWC and OM are both  easy to measure.  OM is already determined for routine fertilization advice and HWC could be implemented easily as earlier mentioned.  Besides this reasons, the characteristics of Model \ref{eq: model} are relatively better compared with the other models. 
 
-For the simple linear models, the predicted values are mostly within the prediction interval. Only the values for farm 2 strongly deviates from the predictions. As earlier noticed, the values for farm 2 of the mineralization indicators are relatively small (Fig. \ref{fig:results_valbox} and the predictions (model \ref{eq: model}) of farm 2 are higher than the real measurements. This could be explained by the fact that the field of farm 2 was plowed in winter 2014/2015, so the organic matter mineralization probably behaves differently compared with permanent grassland. 
+For the simple linear models, the predicted values are mostly within the prediction interval. Only the values for farm 2 strongly deviates from the predictions. As earlier noticed, the values for farm 2 of the mineralization indicators are relatively small (Figure \ref{fig:results_valbox} and the predictions (model \ref{eq: model}) of farm 2 are higher than the real measurements. This could be explained by the fact that the field of farm 2 was plowed in winter 2014/2015, so the organic matter mineralization probably behaves differently compared with permanent grassland. 
 
-The cumulative N mineralization plot (Fig. \ref{fig:results_val}, right) clearly shows what the PNM rate indicates and that the model predictions are all too low. ... \textbf{nog aanvullen als t6 bekend is}. ... Why is the model under predicting? It could be due to the fact that the calibration soils are already no longer in the linear phase. When assuming the incubation in the linear phase while that is not the case, the predicted slope $(\frac{d(Nmin)}{dt})$ will be smaller. Another reason could be the fact that for the model calibration, only data for \ce{NH4} was used, while for the validation the sum of \ce{NH4} and \ce{NO3} was used. This surely makes a difference. However, when extract the \ce{NO3} values, the model is still under predicting (Appendix \ref{chap: Model output}. In practice a lower mineralization rate causes a longer period until N min is available for the grass.  There is no information about the potential total amount of mineralized N and time to reach it (Fig.\ref{fig:intro_Ncum}). But that is not needed for practical applications, since the farmer only wants to know the fertilization requirements on short term. 
+The cumulative N mineralization plot (Figure \ref{fig:results_val}, right) clearly shows what the PNM rate indicates and that the model predictions are all too low. ... \textbf{nog aanvullen als t6 bekend is}. ... Why is the model under predicting? It could be due to the fact that the calibration soils are already no longer in the linear phase. When assuming the incubation in the linear phase while that is not the case, the predicted slope $(\frac{d(Nmin)}{dt})$ will be smaller. Another reason could be the fact that for the model calibration, only data for \ce{NH4} was used, while for the validation the sum of \ce{NH4} and \ce{NO3} was used. This surely makes a difference. However, when extract the \ce{NO3} values, the model is still under predicting (Appendix \ref{chap: Model output}. In practice a lower mineralization rate causes a longer period until N min is available for the grass.  There is no information about the potential total amount of mineralized N and time to reach it (Figure\ref{fig:intro_Ncum}). But that is not needed for practical applications, since the farmer only wants to know the fertilization requirements on short term. 
 
-When evaluating the predicted versus the measured mineralization rate (Fig. \ref{fig:results_val}), it becomes clear that \textbf{deviate towards?,data nog aanvullen ...} values fall within the prediction interval. However, the prediction interval is relatively large compared with the absolute amounts predicted. Starting from a rooting layer of approximately 25 cm and a bulk density of 1.3 kg L$^{-1}$, this corresponds to 0.7$-$3.9 kg N ha$^{-1}$ per day or 20$-$117 kg N ha$^{-1}$ per month. For a growing season (4$-$5 months) this uncertainty could be up to 400 kg N ha$^{-1}$.   This is way to much for use in fertilization advice. The current advice in the Netherlands, which is based on the NFNS, has deviations from measured values of up to 100 kg N ha$^{-1}$ per growing season \citep{Ros2015}. Hence, we can conclude that the identified model does not significantly improve the present models used in practice. 
+When evaluating the predicted versus the measured mineralization rate (Figure \ref{fig:results_val}), it becomes clear that \textbf{deviate towards?,data nog aanvullen ...} values fall within the prediction interval. However, the prediction interval is relatively large compared with the absolute amounts predicted. Starting from a rooting layer of approximately 25 cm and a bulk density of 1.3 kg L$^{-1}$, this corresponds to 0.7$-$3.9 kg N ha$^{-1}$ per day or 20$-$117 kg N ha$^{-1}$ per month. For a growing season (4$-$5 months) this uncertainty could be up to 400 kg N ha$^{-1}$.   This is way to much for use in fertilization advice. The current advice in the Netherlands, which is based on the NFNS, has deviations from measured values of up to 100 kg N ha$^{-1}$ per growing season \citep{Ros2015}. Hence, we can conclude that the identified model does not significantly improve the present models used in practice. 
 
 %Not the actual pool that is predicted: omdat onder controlled conditions uitgevoerd, geen daadwerelijke veld mineralizatie
 
@@ -492,6 +560,9 @@ The N mineralization could also be influenced by other soil chemical factors. Ra
 
 
 \section{Implication for forage production}
+%Dynamic N advice
+%%Implications weather condictions: see ref Ros
+
 \textbf{Misschien kan dit beter in de recommendations???}
 Vergelijking met NLV van nu: foutenmarge in kg/ha 
 
@@ -511,7 +582,7 @@ Beinvloeden pH, beluchting/verdichting, plowing, Crop rotation
    	\item The limited size of the data set. Only 21 soils were measured.  Given the wide range in soil characteristic values, this is way to little to identify solid relationships.
    	\item The unreliability of the data. Four outliers were excluded, because they contained erroneous data. This is almost 20\% of the total data set, so
    	 the reliability of the remaining data is debatable too . 
-   	\item The heterogeneity of the soils. The samples were from different soil type and differed huge in e.g. OM- and clay content. Much of the variation could be explained by the differences in soil types (Fig. \ref{fig:results_boxplots}). This shows the need for studying relationships per soil type. 
+   	\item The heterogeneity of the soils. The samples were from different soil type and differed huge in e.g. OM- and clay content. Much of the variation could be explained by the differences in soil types (Figure \ref{fig:results_boxplots}). This shows the need for studying relationships per soil type. 
     \end{itemize} 
    
    Additionally, the validation data set had also some problems that influences the results. The following troubles appeared during the project.
@@ -594,10 +665,17 @@ Until now we focused on the linkage between soil indicators and N mineralization
 
 \chapter{Calibration data}
 	\label{chap: Calibration data}
+\section{Cumulative N mineralization }
+	\begin{figure}[h] % Plotje van cumulative N min. Friesland data nog toevoegen.
+	\centering
+	\includegraphics[width=0.8\linewidth]{results_Ncum}
+	\caption{Cumulative aerobic N mineralization over time for the different soil types. Error bars denotes the standard error of the means. The mean mineralization rate (slope) of all soils is 0.19 mg N kg$^{-1}$ per day}
+	\label{fig:results_Ncum}
+\end{figure}
 
-
+\section{Data overview}
 	%\begin{table}[h] % Tabel met overzicht van alle bodem variables
-	\small 
+	\footnotesize 
 	%\renewcommand{\arraystretch}{1.2}
 			\begin{longtabu} to \textwidth{X[1.6,l]X[1,l]X[1,r]X[1,r]X[1,r]X[1,r]X[1,r]}
            \caption{Descriptive statistical parameters of the relevant soil variables that were used for the data analysis (\textit{n=17}). Data from internship \cite{Echeverri2014}. The soils consisted of sandy soils (n=8), clayey soils (n=7) and peaty soils (n=3).} \label{tab: results_char} \\
@@ -685,74 +763,158 @@ Until now we focused on the linkage between soil indicators and N mineralization
 	%\end{table}
 \normalsize
 
-  
-  
- 
 
 
 
 \chapter{Validation data}
 		\label{chap: Validation data}
         Als alle data beschikbaar: table output van validation data maken. 
+        
+ \chapter{Understanding variability of the calibration data}
+\section{Correlation plots}
+\label{chap:corr}
+
+	\begin{figure}[h] %Correlatie matrix
+	\centering
+     \subfigure[Mineral soils (n=15)]{
+	\includegraphics[width=0.49\linewidth]{results_corr_min.png}}
+         \subfigure[Clayey soils (n=7)]{
+	\includegraphics[width=0.49\linewidth]{results_corr_clay.png}}
+    	\caption{Correlation matrices of all variables for different subsets of all soils (a) and mineral soils (b). Red numbers denote negative and blue positive correlations. Lower color intensity indicates less correlation. }
+	\label{fig:results_corr_min}
+\end{figure}
+\begin{figure}[h] %Correlatie matrix
+	\centering
+    \subfigure[Sandy soils (n=8)]{
+    \includegraphics[width=0.49\linewidth]{results_corr_san.png}}
+      \subfigure[Peaty soils (n=3)]{
+	\includegraphics[width=0.49\linewidth]{results_corr_peat.png}}
+	\caption{Correlation matrices of all variables for different subsets of sandy soils (a) and peaty soils (b). Red numbers denote negative and blue positive correlations. Lower color intensity indicates less correlation. }
+	\label{fig:results_corr_min}
+\end{figure}
+
+\section{PLS analysis plots}
+\label{chap:PLS}
+
+
+\linespread{0.2}
+ 
+\begin{figure}
+\subfigure[Data: all. Response: PNM.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_totpnm}}
+  \label{fig:pls_totpnm}
+  \quad
+\subfigure[Data: all. Response: BFI.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_totbfi}}
+  \label{fig:pls_totbfi}
+    \quad
+     \subfigure[Data: mineral soils. Response: PNM.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_minpnm}}
+  \label{fig:pls_minpnm}
+  \quad
+\subfigure[Data: mineral soils. Response: BFI.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_minbfi}}
+  \label{fig:pls_minbfi}
+  \quad
+\subfigure[Data: sandy soils. Response: PNM.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_sanpnm}}
+  \label{fig:pls_sanpnm}
+    \quad
+\subfigure[Data: sandy soils. Response: BFI.]{
+    \includegraphics[width=0.45\linewidth]{results_pls_sanbfi}}
+  \label{fig:pls_sanbfi}
+  \quad
+\caption{\textbf{Change names of indicators (BFI-->PNM for BFI plots}PLS analyses for for the prediction of PNM and BFI for all soils, only the mineral soils and only the sandy soils.}. 
+\label{fig:results_pls}		
+\end{figure}
+
+\linespread{1.3}
 
 \chapter{Model output}
 \label{chap:Model output}
 
+  
+
+  
+\section{Simple linear models}
+%plot van simple linear models. Niet in rapport, want te onoverzichtelijk. 
+\label{chap: Simple linear models}
+In the below figures, the simple linear relationships (y=a$\cdot$x+b) are plotted with as response variable the potential N mineralization rate (mg N kg$^{-1}$ day$^{-1}$). Note that all plots are from models with an intercept term.
+\begin{figure}[H] % Plotje van 6 lineaire modellen
+	\includegraphics[width=1\linewidth]{results_models}
+	\caption{Linear relationships (y=a$\cdot$x+b) with potential N mineralization rate (mg N kg$^{-1}$ day$^{-1}$). OM levels of the plotted values ranged from 0.2\% (red) $-$ 26\% (blue).  Blue lines indicate the prediction intervals, green lines indicate the confidence intervals and the red circles are the outliers values. The crosses indicates the validation data points of the farms. }
+	\label{fig:results_models}
+\end{figure}
+
 
 \section{Characteristics of analyzed models }
-\begin{table}[hb] % Table model output
+
+\begin{table}[H] % Table model output
 		\caption{Model output for the prediction of PNM. For the models,  '-1' denotes the absence of an intercept in the model,  ':' an interaction term without single variables included and '*' an interaction term plus both single variables included in the model. Prediction variables are m (moister content), om (OM content), ct (C-total), cn (C/N ratio), no (\ce{NO3}), nh (\ce{NH4}), sa (sand), bf (BFI), hw (HWC), re (respiration)}
 		\footnotesize 
 		\renewcommand{\arraystretch}{1.2}
 		
 		\begin{tabu} to \textwidth{X[1,l]X[3,l]X[1,r]X[1,r]X[1,r]X[1,r]X[1,r]X[1,r]}
 			\toprule \rowfont{\bfseries}
- & Model & R$^2$adj & AIC & BIC & RSS & SE-pred & pval \\ 
+ & Model & R$^2$adj & AIC & BIC & RSS & SEP (mg kg$^{-1}$ d$^{-1}$& pval \\ 
  \midrule
 &\textit{Simple Linear models}& & & & & & \\
-1 & hw & 0.67 & 1.5 & 4 & 0.76 & 1.25 & 3.3e-05 \\ 
-2 & re-1 & 0.94 & 3.27 & 4.94 & 0.95 & 1.28 & 2e-11 \\ 
-3 & bf-1 & 0.93 & 5.43 & 7.09 & 1.08 & 1.3 & 5.5e-11 \\ 
-4 & ct-1 & 0.83 & 21.38 & 23.05 & 2.77 & 1.52 & 1.1e-07 \\ 
-5 & nt-1 & 0.88 & 15.45 & 17.12 & 1.95 & 1.42 & 6.3e-09 \\ 
-6 & om-1 & 0.89 & 13.81 & 15.48 & 1.77 & 1.39 & 2.9e-09 \\   \addlinespace[0.5cm]
+1 & hw & 0.67 & 1.5 & 4 & 0.76 & 0.04 & 3.3e-05 \\ 
+2 & re-1 & 0.94 & 3.27 & 4.94 & 0.95 &0.04  & 2e-11 \\ 
+3 & bf-1 & 0.93 & 5.43 & 7.09 & 1.08 & 0.04 & 5.5e-11 \\ 
+4 & ct-1 & 0.83 & 21.38 & 23.05 & 2.77 & 0.07 & 1.1e-07 \\ 
+5 & nt-1 & 0.88 & 15.45 & 17.12 & 1.95 & 0.06 & 6.3e-09 \\ 
+6 & om-1 & 0.89 & 13.81 & 15.48 & 1.77 & 0.06 & 2.9e-09 \\   \addlinespace[0.5cm]
 &\textit{Mixed linear models}& & & & & & \\
- 7 & hw+hw:ct-1 & 0.94 & 3.11 & 5.6 & 0.84 & 1.27 & 1.6e-10 \\ 
- 8 & hw*om-1 & 0.95 & 0.63 & 3.96 & 0.65 & 1.24 & 3.5e-10 \\ 
- 9 & hw+ct+nt & 0.67 & 3.33 & 7.5 & 0.67 & 1.26 & 0.00053 \\ 
- 10 & hw+hw:om+om:ct & 0.72 & 0.46 & 4.62 & 0.57 & 1.23 & 0.00018 \\ 
- 11 & re+nh+no-1 & 0.95 & 1.82 & 5.15 & 0.69 & 1.25 & 5.7e-10 \\ 
- 12 & re+cn:ct-1 & 0.95 & 0.32 & 2.82 & 0.71 & 1.24 & 4.7e-11 \\ 
- 13 & re+ct:sa-1 & 0.96 & -3.92 & -1.42 & 0.56 & 1.21 & 7.2e-12 \\ 
- 14 & om+om:bf & 0.61 & 5.43 & 8.76 & 0.86 & 1.28 & 0.00056 \\
+ 7 & hw+hw:ct-1 & 0.94 & 3.11 & 5.6 & 0.84 & 0.04 & 1.6e-10 \\ 
+ 8 & hw*om-1 & 0.95 & 0.63 & 3.96 & 0.65 & 0.03 & 3.5e-10 \\ 
+ 9 & hw+ct+nt & 0.67 & 3.33 & 7.5 & 0.67 & 0.04 & 0.00053 \\ 
+ 10 & hw+hw:om+om:ct & 0.72 & 0.46 & 4.62 & 0.57 & 0.03 & 0.00018 \\ 
+ 11 & re+nh+no-1 & 0.95 & 1.82 & 5.15 & 0.69 & 0.04 & 5.7e-10 \\ 
+ 12 & re+cn:ct-1 & 0.95 & 0.32 & 2.82 & 0.71 & 0.03 & 4.7e-11 \\ 
+ 13 & re+ct:sa-1 & 0.96 & -3.92 & -1.42 & 0.56 & 0.03 & 7.2e-12 \\ 
+ 14 & om+om:bf & 0.61 & 5.43 & 8.76 & 0.86 & 0.04 & 0.00056 \\
 \bottomrule
 			
 		\end{tabu}
 		\label{tab: results_mods}
 	\end{table}
     
-  
-\section{Simple linear models}
-%plot van simple linear models. Niet in rapport, want te onoverzichtelijk. 
-\label{chap: Simple linear models}
-In the below figures, the simple linear relationships (y=a$\cdot$x+b) are plotted with as response variable the potential N mineralization rate (mg N kg$^{-1}$ day$^{-1}$). Note that all plots are from models with an intercept term.
-\begin{figure}[h] % Plotje van 6 lineaire modellen
-	\includegraphics[width=1\linewidth]{results_models}
-	\caption{Linear relationships (y=a$\cdot$x+b) with potential N mineralization rate (mg N kg$^{-1}$ day$^{-1}$). OM levels of the plotted values ranged from 0.2\% (red) $-$ 26\% (blue).  Blue lines indicate the prediction intervals, green lines indicate the confidence intervals and the red circles are the outliers values. The crosses indicates the validation data points of the farms. }
-	\label{fig:results_models}
-\end{figure}
     
 \section{Output for the selected model}
-	\begin{figure}[ht] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
-		\includegraphics[width=1\linewidth]{ap_mod}
-		\caption{Model output for the selected model (Eq. \ref{eq: model})}
-		\label{fig:ap_mod}
-	\end{figure}
+\label{chap: modplots}
+	\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
+    	\centering
+		\includegraphics[width=0.85\linewidth]{appendix_modout_all}
+		\caption{Model output for the selected model (Eq. \ref{eq: model}: PNM~HWC*OM), calibrated on the whole data set.}
+		\end{figure}
+		\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
+    	\centering
+		\includegraphics[width=0.85\linewidth]{appendix_modout_min_om}
+		\caption{Model output for model  PNM~OM-1, calibrated on the mineral soils.}
+		\end{figure}
+		\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
+    	\centering
+		\includegraphics[width=0.85\linewidth]{appendix_modout_min_hw}
+		\caption{Model output for model  PNM~HWC-1, calibrated on the mineral soils.}
+		\end{figure}
+		\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
+    	\centering
+		\includegraphics[width=0.85\linewidth]{appendix_modout_sand_om}
+		\caption{Model output for model  PNM~OM-1, calibrated on the sandy soils.}
+		\end{figure}
+		\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
+    	\centering
+		\includegraphics[width=0.85\linewidth]{appendix_modout_sand_hw}
+		\caption{Model output for model  PNM~HWC-1, calibrated on the sandy soils.}
+		\end{figure}
 	
 
 \chapter{Soil analysis protocols}
 		\label{chap: Protocols}
 \section{Potential N mineralization (PNM)}
+Sample moister contents were set to about 60\% of the water holding capacity (WHC). The WHC was determined by the addition of water to dried soil until it became saturated and a water film was growing on the surface. Subsequently, 100 g of the homogenized sample was put in polyethylene bags that were permeable for \ce{CO2} and \ce{O2} , but not for \ce{H2O} molecules. After sealing the samples were set in a room at constant temperature of 20°C. Samples were analyzed for mineral N by the BLGG lab after 1, 3, 6, 9 and 12 weeks. 
+
 \subsubsection{Procedure}
 The following procedure is developed to determine the aerobic potential N mineralization of soils. The protocol is described by \citet{Ros2014}. 
 \begin{enumerate}
@@ -799,7 +961,7 @@ The following procedure is used by the BLGG lab. The procedure is described by \
 \subsubsection{Calculations}
 
 \section{Hot Water extractable Carbon (HWC)}
-The following protocol is described by \citet{Ghani2003}. 
+The following protocol is described by \citet{Ghani2003}. First 30 ml of distilled water was added to  3 g of dried soil. The tubes were shaken in a vortex shaker during 30 min, centrifuged at 3600 rpm during 20 min. Subsequently, 30 ml of water was added to the settlement. The tubes were shaken 30 min and next were placed in a stove at 80 ˚C during 16 hours. Afterwards, the tubes were centrifuged at 3600 rpm during 20 min. Finally, the supernatant were filtered using a 0.45 µm filter and the DOC was analyzed using a TOC analyzer. 
 \subsubsection{Procedure}
 \begin{enumerate}
 \item Doe in 50 ml plastic buizen 30 ml demiwater en voeg 3 gram grond toe
@@ -819,6 +981,9 @@ The following protocol is described by \citet{Ghani2003}.
 \subsubsection{Calculations}
 \begin{equation} HWC= TC-IC (=OC)
 \end{equation}
+\chapter{Dynamic N advice tool (under construction)}
+\label{chap: dynN}
+
 \chapter{Small study 1: On Farm nutrient management}
 		\label{chap: study1}
 		The relations between soil quality and forage production and farm management were evaluated. 
@@ -829,7 +994,7 @@ The following protocol is described by \citet{Ghani2003}.
 			\section{Field analysis}
 		
 			\subsection{Soil heterogenity}
-			We tested the hetereogenity of the fields. The fields are all smaller than 6 ha, but they vary widely in their characteristics as shown in Fig....
+			We tested the hetereogenity of the fields. The fields are all smaller than 6 ha, but they vary widely in their characteristics as shown in Figure...
 			Plot values of different characteristic areas in the field and the mean of all measurements of the fields (+- SE of the mean). For PNM, HWC, BFI.
 			\subsection{Grass data}
 			Linkage between N mineralization and forage protein content
@@ -850,6 +1015,7 @@ The following protocol is described by \citet{Ghani2003}.
 		
 		
 		\end{verbatim}
+\section{Internship reflection}
 \addtocontents{toc}{\endgroup}
 \end{appendices}
 
