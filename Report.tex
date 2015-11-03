@@ -405,10 +405,6 @@ The parameter estimates for HWC, OM, the interaction between HWC and OM and the 
 \section{Validation linear model}
 Measured values for the labile organic matter indicators varied widely (\ref{fig:results_valbox}). Variation was highest for the aerobic PNM rate, which is explainable because these consists of two measurements for each farm which are taken from two distinctly different parts of the fields. It is remarkable that for farm B all values are relatively low compared with the other farms. All validation data can be found in Appendix \ref{chap: Validation data}.
 Note that for the validation of the selected model, the values for HWC were the averages of the HWC measurements over the season and OM was only determined on 07/03/2015 (Figure \ref{fig:mm_samples}).
-% * <jobdepater@gmail.com> 2015-10-09T09:33:09.014Z:
-%
-% 
-%
 
 	\begin{figure}[ht] % boxplots soil indicators per Farm
 		\centering
@@ -601,7 +597,7 @@ Beinvloeden pH, beluchting/verdichting, plowing, Crop rotation
     REsp niet te doen
 
 \chapter{Conclusions }
-\textbf{or merge conclusions and recommendations?}
+
 %In this study, the ..was evaluated
 This study is conducted to test a proof of concept of statistical modeling and validation. Based on our results we could conclude the following. 
 \begin{itemize}
@@ -617,22 +613,24 @@ This study is conducted to test a proof of concept of statistical modeling and v
 % -how is the N mineralization linked to forage quality (CP)
 %-In what ways could enhanced N prediction implemented in fertilization advice
 
-	 \section{Statistical methods}
-
-%The factors that affect the slope of the regression of EON and mineralizable N should be further investigated to determine whether these depend on soil properties such as texture, organic matter, acidity and groundwater level, or methodological issues such as location, climate and time of sampling. 
-	 \subsection{Data}
-Furthermore, I recommend to apply multivariate statistics on large data sets. Those data sets could also consist of measurements from the past. For example, the NMI is already applying research for more than 50 years. Within this time a huge amount of data is gathered. It would be great if this data could be analyzed to identify relationships between soil indicators, N mineralization and forage quality. 
-	\subsection{Statistical techniques}
-	Multivariate statistical methods that can be use to analyze huge data sets for relevant significant relations are for example ...
-    more Yvars: multivariate PLS
-
 	\section{Linking N mineralization to forage quality}
 Until now we focused on the linkage between soil indicators and N mineralization. The next step is to relate the N mineralization to grass production in terms of forage quality. A possible indicators is the crude protein, which indicates how much 
 
-
 	
+    
+\section{Statistical methods}
+
+%The factors that affect the slope of the regression of EON and mineralizable N should be further investigated to determine whether these depend on soil properties such as texture, organic matter, acidity and groundwater level, or methodological issues such as location, climate and time of sampling. 
+	 \subsection{Data}
+Furthermore, I recommend to apply statistics on large data sets. Those data sets could also consist of measurements from the past. For example, the NMI is already applying research for more than 50 years. Within this time a huge amount of data is gathered. It would be great if this data could be analyzed to identify relationships between soil indicators, N mineralization and grass uptake. 
+
+	\subsection{Statistical techniques}
+	Multivariate statistical methods that can be very helpful to explore huge data sets for relevant significant relations. Examples of proper multivariate methods are  are for example PLS (noemen. ) Another possibility is to apply general additive modeling techniques on the data by using smoothing techniques and take in to account for the different sources of random factors. Random factors are the explanatory variables that cannot be changed such as weather, soil profile and other spatial differences. 
+
+
+
 	\section{Practical fertilization advice}
-	Farmers wish straightforward tools that can be implemented in their soil nutrient management planning schemes. In future it is maybe possible to develop a self learning fertilization advice tool which take into account the soil history for each field and the weather forecast of the near future. With the knowledge we have until now it is also possible to construct
+	Farmers wish straightforward tools that can be implemented in their soil nutrient management planning schemes. In future it is maybe possible to develop a self learning fertilization advice tool which take into account the field history for each field and the weather forecast of the near future (dynamic N advice). 
     
     \subsection{Corrections for environmental influences}
 	weer: moeilijk te voorspellen, maar gemiddeled zijn de modellen van KNMI goed. Extreme precipitation occurs more and more, sometimes up to 150 mm per
@@ -881,7 +879,7 @@ In the below figures, the simple linear relationships (y=a$\cdot$x+b) are plotte
 	\end{table}
     
     
-\section{Output for the selected model}
+\section{Output for the selected model calibrated on distinct data}
 \label{chap: modplots}
 	\begin{figure}[H] % predicted vs observed values van model PNM = 0.13HWC -1.05 OM +0.15 HWC:OM
     	\centering
