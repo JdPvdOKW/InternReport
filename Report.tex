@@ -316,10 +316,10 @@ $SOM$ and $Clay$ are expressed in percentages and were the average values of the
 In addition, data from\citet{Ros2011} is used to inspect if the chosen model was also valid for data from other data sets. 
 
 
-\section{Farm management -->naar appendix }
+\section{Farm management }
 The heterogeneity of the soils was analyzed to give the farmers insight in the spatial soil characteristics within their fields. To do so, different samples were taken from characteristic field areas for each farm on 07/03/2015. 
 
-In addition, for the second and the third grass cycle, an N fertilization advice was made for each farm, using the Dynamic N Advice tool (ref). Advice for the second cycle was given on 05/11/2015  and advice for the third cycle was given on 07/15/2015. Input values for the model can be found in Appendix \ref{chap: dynN}. When data was not available, the model used default values or district averages. All farms were in the same region (Table \ref{tab:results_farms}), and closest to the KNMI weather station in Marknesse, Flevoland. The crude protein (CP) was analyzed from fifth to sixth cycle (Figure \ref{fig:mm_samples}) to evaluate if the crop uptake according to what was expected. 
+In addition, for the second grass cycle, an N fertilization advice was made for each farm, using the Dynamic N Advice tool (ref). Advice for the second cycle was given on 05/11/2015  and advice for the third cycle was given on 07/15/2015. Input values for the model can be found in Appendix \ref{chap: dynN}. When data was not available, the model used default values or district averages. All farms were in the same region (Table \ref{tab:results_farms}), and closest to the KNMI weather station in Marknesse, Flevoland. The crude protein (CP) and other key forage quality indicators were analyzed a few times during the growing season (Figure \ref{fig:mm_samples}) to evaluate if the crop uptake was according to what was expected. 
 
 
 
@@ -591,17 +591,18 @@ Within the range of the calibration data, the accuracy of the predictions was ap
 
 
 \subsection{Explaining variability}
-The large prediction interval of the model can be explained by variability caused by environmental factors and soil quality characteristics. In our study, we only considered some soil characteristics. According to the PLS analysis, it is most likely that the variability of the N mineralization is mainly caused by organic matter dynamics and to a lesser extend the textural properties of the soil. 
-\subsubsection{Environmental factors}
-    As already mentioned in the state of the art (Chapter \ref{chap: state of the art}), the variation of N mineralization is not only caused by soil characteristics, but also for a great extend by environmental factors. Temperature and moisture status has high influence on the activity and distribution of microbes (ref) which on its turn are the driving factors of SOM decomposition. 
-In practice it can make a huge difference in mineralization if there is a dry summer or a mild winter compared with a wet summer and a strong winter (ref). 
+The large prediction interval of the model can be explained by variability caused by environmental factors and soil quality characteristics. In our study, we only considered some soil characteristics. According to the PLS analysis, it is most likely that the variability of the N mineralization is mainly caused by organic matter dynamics and to a lesser extend the textural properties of the soil.
 
-Oliver Koch:Temperature sensitivity of microbial respiration, nitrogen
-mineralization, and potential soil enzyme activities in organic3
-Microscale soil heterogeneity. 
-alpine soils
-\subsubsection{Soil quality characteristics and processes}
-Mineralization capacity (potential mineralization amount) and  the mineralization rate depends on the mineralization microbes. The microbial activity is sensitive for environmental factors. This also have to do with the optimum conditions for the enzyme functioning. In addition, the microbe community (which species) 
+    As already mentioned in the state of the art (Chapter \ref{chap: state of the art}), the variation of N mineralization is not only caused by soil characteristics, but also for a great extend by environmental factors. Temperature and moisture status has high influence on the activity and distribution of microbes (ref) which on its turn are the driving factors of SOM decomposition. In practice it can make a huge difference in mineralization if there is a dry summer or a mild winter compared with a wet summer and a strong winter (ref). 
+
+Mineralization capacity (total potential mineralization amount) and  the mineralization rate depends on the type and distribution of the mineralization microbes. The microbial activity is sensitive for environmental factors. This also have to do with the optimum conditions for the enzyme functioning. 
+
+The N mineralization could also be influenced by soil chemical factors. Of course there are optimum pH values for microbial groups (\citep{Smith1996}). At very acid or alkaline pH levels, the mineralization is suppressed or stopped because of poor microbial activity. In addition, ratio's between macro and trace elements influence the distribution and capacity of the microbial decomposing organisms as well as the physical protection of the soil particles against decomposition. 
+
+In general the physical characteristics are of high influence on water regulation and aeration, which are both essential for organic matter mineralization. This is also related to the bulk density and so the rooting depth and consequently the N uptake. 
+
+Since almost all soil characteristics are linked to environmental conditions as weather and climate, it is not possible to explain the variability in N mineralization only with soil characteristics. To enhance the accuracy of the predictions, it is needed to implement environmental corrections in the prediction models. 
+
      %Geisseler2010: direct and MIT route
     %Soil Food web
     %Hassink: C and N mineralization in sandy and loamy grassland soils: The role of microbes and microfauna
@@ -609,15 +610,13 @@ Mineralization capacity (potential mineralization amount) and  the mineralizatio
     %Schimel2004: changing paradigm: N-arme condities, gewas niet alleen nitraat en ammonium kan opnemen, maar ook opgeloste organische stikstof (Schimel & Bennett, 2004)
     						%exoenzyme-driven depolymerization is seen as the rate-limiting step in the generation of bioavailable N (Chapin et al. 2002)
                             %problem: how to deterimine the distribution
-                            
+                    
+%                     Oliver Koch:Temperature sensitivity of microbial respiration, nitrogen
+% mineralization, and potential soil enzyme activities in organic3
+% Microscale soil heterogeneity. 
+% alpine soils
 
  %when the direct route is dominant, gross N mineralization underestimates the amount of N made available from the residue.
-	chemistry: 
-The N mineralization could also be influenced by other soil chemical factors. Ratio's between
-
-	Physical characteristics: texture, infiltration (aeration),  rooting depth, bulk density
-    
-
 
 \section{Implication for forage production}
 %Dynamic N advice
@@ -633,9 +632,9 @@ betere beschikbaar?
     REsp niet te doen
     
     Structuur is veranderd
-    Problem: hoe berekenen naar kg/ha/year? rate verandert nl over jaar. 
+    Problem: hoe berekenen naar kg/ha/year? rate verandert nl over jaar. It may not reflect what occurs under field conditions.
 
-\textbf{Misschien kan dit beter in de recommendations???}
+
 Vergelijking met NLV van nu: foutenmarge in kg/ha 
 
 
@@ -691,7 +690,7 @@ Beinvloeden pH, beluchting/verdichting, plowing, Crop rotation
     
     \subsection{Corrections for environmental influences}
 	weer: moeilijk te voorspellen, maar gemiddeled zijn de modellen van KNMI goed. Extreme precipitation occurs more and more, sometimes up to 150 mm per
-    Eerste opzet: simpele tool met correctiefactoren voor het weer per maand. (Temp, precipitation afwijkend van gemiddeld)
+ 
 
 
 
